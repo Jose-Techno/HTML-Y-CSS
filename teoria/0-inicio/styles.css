@@ -1,0 +1,41 @@
+/*sintaxis CSS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'poppins', Courier, monospace;
+}
+
+/* etiqueta */
+h1{
+    color: blue !important;
+    color: rgb(120,88,56,);/* formato rgb */
+    color: rgba(56,23,56, 0.5);/* formato rgba opacidadd */
+    font-size: 40px; /* tamaño de fuente */
+    
+}
+
+/*clase */
+.contenedor{
+    background-color: rgb(245, 183, 228); /* formato rgb */
+}
+
+/*id */
+#headerconten{
+    background-color: aquamarine; /* color de fondo */
+    font-weight: bold;/* negrita */
+}
+
+footer{
+    
+    color: white; /* color de letra */
+    font-weight: bold;/* negrita */
+}
+
+.contenedor{
+    .espacios{
+        line-height: 2;/* espacio entre lineas */
+        letter-spacing: 3px; /* espacio entre letras */
+        text-align: center; /* alineacion de texto centrado */
+    }
+}

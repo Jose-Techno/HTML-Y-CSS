@@ -1,0 +1,190 @@
+*{
+    /* Reset de margenes y paddings */
+    padding: 0; /*padding: espacio interno*/
+    margin: 0;/*margen: espacio externo*/
+    box-sizing: border-box;/*incluye el padding y el border en el ancho y alto del elemento*/
+    font-family: sans-serif,arial,helvetica; /*fuente por defecto*/
+}
+
+
+body{
+    /*Disposito movil pequeño*/
+    height: 100vh; /*100% de la altura de la ventana*/
+    display: grid; /*establece un contenedor de grid*/
+    grid-template: 
+    "header"80px
+    "nav"80px
+    "main"1fr
+    "saidebar"
+    "footer"80px
+    / 1fr
+    ;
+    gap: 10px; /*espacio entre los elementos del grid*/
+
+    /*Dispositivo movil mediano*/
+    @media (min-width: 576px){
+        
+    }
+
+    /*Dispositivo tablet*/
+    @media (min-width: 768px){
+        grid-template: 
+        "header header header" 80px
+        "nav main saidebar"1fr
+        "footer footer footer"80px/
+        80px 1fr 18%
+        ;/*define las areas del grid*/
+        
+        grid-gap: 10px; /*espacio entre las celdas del grid*/
+    
+    }
+
+    /*Dispositivo laptop*/
+    @media (min-width: 992px){
+        grid-template:
+        "header header header" 80px
+        "nav main saidebar"1fr
+        "footer footer saidebar"80px/
+        80px 1fr 20%
+        ;/*define las areas del grid*/
+    }
+
+    /*Dispositivo monitor*/
+    @media (min-width: 1200px){
+        grid-template:
+        "header header header" 80px
+        "nav main saidebar"1fr
+        "nav footer saidebar"80px/
+        80px 1fr 20%
+        ;/*define las areas del grid*/
+    }
+}
+
+.header{
+    /*Disposito movil pequeño*/
+    background-color: rgb(234, 114, 62);
+    grid-area: header;/*asigna el area del grid*/
+    position: relative;
+
+    transition: all 0.5s cubic-bezier(.01,.2,.77,1.89); /*transicion suave para el cambio de color de fondo*/
+    transition-delay: 0.5s; /*retraso de la transicion*/
+    font-size: 16px;
+
+
+    &:hover{
+        background-color: rgb(229, 64, 201);
+        font-size: 25px;
+    }/*cambia el color de fondo al pasar el mouse por encima*/
+    &:active{
+        background-color: rgb(186, 181, 193);
+    }/*cambia el color de fondo al hacer click*/
+
+
+    /*Dispositivo movil mediano*/
+    @media (min-width: 576px){
+        background-color: brown;/*cambia el color de fondo*/
+    }
+
+    /*Dispositivo tablet*/
+    @media (min-width: 768px){
+        background-color: blueviolet;/*cambia el color de fondo*/
+    
+    }
+
+    /*Dispositivo laptop*/
+    @media (min-width: 992px){
+        background-color: darkcyan;/*cambia el color de fondo*/
+        
+    }
+
+    /*Dispositivo monitor*/
+    @media (min-width: 1200px){
+        background-color: darkgoldenrod;/*cambia el color de fondo*/
+        
+    }
+}
+
+.nav{
+    background-color: rgb(238, 233, 144);
+    grid-area: nav;/*asigna el area del grid*/
+}
+
+.main{
+    background-color: rgb(255, 255, 255);
+    grid-area: main;/*asigna el area del grid*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .cajaAnimada1{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        color: white;
+        animation: mover 4s infinite linear;
+        position:relative;
+        z-index: -1;/* estable la siuperpocicion para ver quien va sobre el otro elemento*/
+    }
+    .cajaAnimada2{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(224, 68, 68);
+        color: white;
+        /*animation: mover 2s infinite linear;*/
+        position:relative; /*ase que su posicion se pueda mover*/
+        border-radius: 15px;/*bordes redondeados*/
+
+        /*box-shadow: desplazamiento-x / desplazamiento-y / desenfoque / extension / color*/
+        box-shadow: -15px -13px 11px 3px rgba(0,0,0,0.1);
+        z-index: 0;
+
+        overflow: hidden; /*respeta el area del contenedor en caso de que aya un radius*/
+
+        .imagen{
+            width: 100%;/*ancho*/
+            height: 100%;/*alto*/
+            /*object-fit: contain;*/
+            object-fit: cover;/*object fit hace que la imagen no se desborde de su contenedor*/
+        }
+    }
+}
+
+.section{
+    background-color: rgb(68, 223, 225);
+    grid-area: saidebar;/*asigna el area del grid*/
+}
+
+.footer{
+    background-color: rgb(33, 57, 232);
+    grid-area: footer;/*asigna el area del grid*/
+}
+
+@keyframes mover{
+
+    /*con el siguiente codigo podemos modificar el
+    moviemiento dependiendo al porcentaje
+
+    0%{
+        top: 0;
+        background-color: orange;
+    }
+    50%{
+        top:200px;
+        background-color: purple;
+    }
+    100%{
+        top:0;
+        background-color: orange;
+    }*/
+
+    /*con el siguiente es mas directo pero no podemos aser modificaciones
+    en cuanto al tiempo de porcentajes*/
+    from{
+        
+        transform: rotate(0deg);
+    }
+    to{
+        
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    /* Reset de margenes y paddings */
+    padding: 0; /*padding: espacio interno*/
+    margin: 0;/*margen: espacio externo*/
+    box-sizing: border-box; /*incluye el padding y el border en el ancho y alto total del elemento*/
+    font-family: 'Poppins', sans-serif;/*fuente de texto*/
+}
+
+body{
+    display: flex; /*utiliza flexbox para el diseño*/
+    height: 100vh; /*altura: 100% de la ventana del navegador*/
+    width: 100vw; /*ancho: 100% de la ventana del navegador*/
+    background-color: black;
+    justify-content: center; /*alinear elementos horizontalmente al centro*/
+    align-items: center; /*alinear elementos verticalmente al centro*/
+}
+
+.content{
+    background-color: #9750B6;
+    display: flex;
+    align-items: center; /*alinear elementos horizontalmente al centro*/
+    justify-content: center; /*alinear elementos verticalmente al centro*/
+    padding: 10px; /*padding: espacio interno*/
+    gap: 10px; /*espacio entre elementos*/
+    width: 100%; /*ancho*/
+    section{
+        width: 100px; /*ancho*/
+        height: 100px; /*alto*/
+        background-color: #F09227; /*color de fondo*/
+        border: rgb(14, 14, 14) 2px solid; /*borde: color, grosor y estilo*/
+        margin: 10px; /*margen: espacio externo*/
+        border-radius: 20px; /*bordes redondeados*/
+        display: flex; /*utiliza flexbox para el diseño*/
+        align-items: center; /*alinear elementos horizontalmente al centro*/
+        justify-content: center; /*alinear elementos verticalmente al centro, en esta propiedad se pueden alinear los elementos de diferente forma para organizarce mejor*/
+        justify-content: end;/*alinear elementos al final*/
+        justify-content: flex-end;/*alinear elementos al final*/    
+        justify-content: space-between;/*distribuir espacio entre los elementos*/
+        justify-content: space-around;/*distribuir espacio alrededor de los elementos*/
+    }
+}

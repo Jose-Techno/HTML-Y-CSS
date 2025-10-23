@@ -1,0 +1,56 @@
+*{
+    /* Reset de margenes y paddings */
+    padding: 0; /*padding: espacio interno*/
+    margin: 0;/*margen: espacio externo*/
+    box-sizing: border-box;/*incluye el padding y el border en el ancho y alto del elemento*/
+    font-family: sans-serif,arial,helvetica; /*fuente por defecto*/
+}
+
+
+body{
+    height: 100vh; /*100% de la altura de la ventana*/
+    display: grid; /*establece un contenedor de grid*/
+    grid-template-areas: 
+    "header header header"
+    "nav main saidebar"
+    "footer footer footer"
+    ;/*define las areas del grid*/
+    grid-template-rows: 80px 1fr 80px; /*define las filas del grid por altura*/
+    grid-template-columns:80px 1fr 30%; /*define las columnas del grid por ancho*/
+    grid-gap: 10px; /*espacio entre las celdas del grid*/
+    /* 
+
+    otra forma de definir el grid completo
+
+    grid-template:
+    "header header header" 80px
+    "nav main saidebar" 1fr
+    "footer footer footer" 80px 
+    / 80px 1fr 30%; 
+    */
+}
+
+.header{
+    background-color: rgb(234, 114, 62);
+    grid-area: header;/*asigna el area del grid*/
+}
+
+.nav{
+    background-color: rgb(238, 233, 144);
+    grid-area: nav;/*asigna el area del grid*/
+}
+
+.main{
+    background-color: rgb(103, 236, 91);
+    grid-area: main;/*asigna el area del grid*/
+}
+
+.section{
+    background-color: rgb(68, 223, 225);
+    grid-area: saidebar;/*asigna el area del grid*/
+}
+
+.footer{
+    background-color: rgb(33, 57, 232);
+    grid-area: footer;/*asigna el area del grid*/
+}

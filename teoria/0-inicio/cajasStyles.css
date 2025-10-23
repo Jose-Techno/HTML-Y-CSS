@@ -1,0 +1,45 @@
+*{
+    /* Reset de margenes y paddings */
+    padding: 0; /*padding: espacio interno*/
+    margin: 0;/*margen: espacio externo*/
+    box-sizing: border-box;/*incluye el padding y el border en el ancho y alto del elemento*/
+    font-family: sans-serif,arial,helvetica; /*fuente por defecto*/
+}
+
+.caja1{
+    background-color: aquamarine;/*color de fondo*/
+    margin: 10px;/*margen: espacio externo*/
+    padding: 20px;/*padding: espacio interno*/
+    border: blue 3px solid; /*borde: color, grosor y estilo*/
+    height: 100vh; /*altura: 100% de la ventana del navegador*/
+    width: 100vw; /*ancho: 100% de la ventana del navegador*/
+    
+    
+    .caja2{
+        margin: 5px;/*margen: espacio externo*/
+        padding: 10px;/*padding: espacio interno*/
+        background-color: rgb(235, 174, 187);/*color de fondo*/
+        border-radius: 20px 15px 10px 5px; /*bordes redondeados: top-left, top-right, bottom-right, bottom-left*/
+        border: red 2px solid; /*borde: color, grosor y estilo*/
+    }
+
+}
+
+
+.contenedor{
+    display: flex; /*utiliza flexbox para el diseño*/
+    border: red 2px solid; /*borde: color, grosor y estilo*/
+    flex-direction: column; /*dirección de los elementos: columna*/
+    align-items: center; /*alinear elementos horizontalmente al centro*/
+    justify-content: center; /*alinear elementos verticalmente al centro*/
+    gap: 10px; /*espacio entre elementos*/ 
+        section{
+        width: 100px; /*ancho*/
+        height: 100px; /*alto*/
+        background-color: lightblue; /*color de fondo*/
+        border-radius: 20px; /*bordes redondeados*/
+        display: flex; /*utiliza flexbox para el diseño*/
+        align-items: center; /*alinear elementos horizontalmente al centro*/
+        justify-content: center; /*alinear elementos verticalmente al centro*/
+    }
+}

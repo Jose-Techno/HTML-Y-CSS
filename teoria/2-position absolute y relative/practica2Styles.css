@@ -1,0 +1,35 @@
+*{
+    padding: 0;/*Quita el padding por defecto*/
+    margin: 0;/*Quita el margin por defecto*/
+    font-size: border-box;/*Incluye el padding y border en el ancho y alto total de los elementos*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;/*Fuente por defecto*/
+}
+
+body{
+    display: flex;/*Flexbox*/
+    border: red solid 2px;/*Para ver los bordes del body*/
+    height: 100vh;/*100% de la ventana del navegador*/
+    justify-content: center;/*Alinea horizontalmente*/
+    align-items: center;/*Alinea verticalmente*/
+    background-color: black;/*Color de fondo del body*/
+}
+
+.padre{
+    background-color: aliceblue;/*Color de fondo del contenedor padre*/
+    width: 200px;/*Ancho del contenedor padre*/
+    height: 200px;/*Alto del contenedor padre*/
+    display: flex;/*Flexbox*/
+    justify-content: center;/*Alinea horizontalmente*/
+    align-items: center;/*Alinea verticalmente*/
+    border: 2px solid blue;/*Borde del contenedor padre*/
+    position: relative;/*Establece el contexto de posicionamiento para el hijo*/
+    .hijo{
+        border: aqua solid 2px;/*Borde del contenedor hijo*/
+        width: 50px;/*Ancho del contenedor hijo*/
+        height: 50px;/*Alto del contenedor hijo*/
+        background-color: coral;/*Color de fondo del contenedor hijo*/
+        position: absolute;/*Posicionamiento absoluto respecto al padre*/
+        bottom: 0;/*Alinea al fondo del contenedor padre*/
+        right: 0;/*Alinea a la derecha del contenedor padre*/
+    }
+}
